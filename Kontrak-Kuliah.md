@@ -20,7 +20,7 @@ Pilihlah text editor atau IDE yang sesuai dengan preferensimu. Beberapa pilihan 
 | Sublime Text | [Download](https://www.sublimetext.com/) | [Tutorial](https://youtu.be/PxJHRgXHpWo?si=g92LyYWDmp2mo0LU) |
 | PyCharm | [Download](https://www.jetbrains.com/pycharm/) | [Tutorial](https://youtu.be/Sy0bDar2PnU?si=m1AQprHEiEVKMIfi)|
 
-### Langakh 2: Proses Instalasi 
+### Langkah 2: Proses Instalasi 
 
 1. Pergi ke situs web resmi IDE yang kamu pilih.
 2. Ikuti petunjuk yang diberikan untuk mengunduh installer IDE.
