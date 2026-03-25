@@ -162,7 +162,7 @@ Elemen `<table>` pada HTML merepresentasikan data tabular, yaitu informasi yang 
 ### Struktur Dasar Tabel
 Tabel pada HTML disusun dari tiga buah elemen, yaitu `<table>`, `<tr>` dan `< td >` atau `<th>`. Elemen `<table>` digunakan untuk menandakan dimulainya dan diakhirinya sebuah konten tabel dan juga sebagai wadah untuk tabel itu sendiri. Kemudian elemen `<tr>` digunakan untuk membuat sebuah baris baru yang di dalamnya terdapat elemen `<td>` atau `<th>` sehingga menghasilkan sebuah sel.
 
-![Gambar](SrtrukturDasarTabel.jpeg)
+![Gambar](StrukturDasarTabel.jpeg)
 
 ### Spanning Cell (Merging Cell)
 
