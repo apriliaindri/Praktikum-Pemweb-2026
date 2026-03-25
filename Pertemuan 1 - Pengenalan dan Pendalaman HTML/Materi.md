@@ -9,7 +9,7 @@ HTML (HyperText Markup Language) adalah bahasa dasar untuk membuat halaman web. 
 
 Elemen HTML adalah salah satu bagian dari HTML dalam membangun halaman web. Elemen ini digunakan untuk mendefinisikan elemen-elemen yang ditampilkan dalam halaman web. Ada beberapa hal untuk membangun elemen HTML itu sendiri. Berikut adalah bagan dari anatomi elemen HTML.
 
-![Gambar](Anatomi HTML.png)
+![Gambar](AnatomiHTML.png)
 
 Berikut adalah pembahasan dari masing-masing bagian dari bagan di atas.
 
@@ -25,13 +25,13 @@ Berikut adalah pembahasan dari masing-masing bagian dari bagan di atas.
 
 Dalam membuat elemen HTML, ada satu hal yang dapat dilakukan, yaitu memberi atribut. Atribut dapat memberi informasi-informasi tambahan untuk elemen HTML. Informasi ini tidak akan tampil dalam halaman web, tetapi ia dapat menentukan perilaku elemen biasanya. Berikut adalah anatomi dari atribut elemen untuk memperjelas pemahaman kamu.
 
-![Gambar](Att HTML.png)
+![Gambar](AtributeHTML.png)
 
 ### Anatomi Dokumen HTML
 
 Pada dasarnya, dokumen HTML memerlukan struktur dasar untuk menampilkan halaman web dengan baik. Halaman web seharusnya memiliki susunan elemen HTML yang tampak seperti berikut.
 
-![Gambar](Anatomi Dokumen HTML.jpeg)
+![Gambar](AnatomiDokumenHTML.jpeg)
 
 Keterangan:
 
@@ -47,7 +47,7 @@ Keterangan:
 
 Dokumen di atas sebetulnya akan membentuk sebuah hierarki elemen atau yang biasa disebut dengan DOM Tree (pohon DOM). Ini dapat Temen" analogikan seperti silsilah keluarga. Kurang lebih, berikut adalah DOM Tree yang terbentuk dari dokumen HTML di atas.
 
-![Gambar](DOM Tree.png)
+![Gambar](DOMTree.png)
 
 ### Elemen dan Tag Dasar dalam HTML
 
@@ -102,7 +102,7 @@ Dokumen di atas sebetulnya akan membentuk sebuah hierarki elemen atau yang biasa
 
 Website memiliki hierarki konten yang sama seperti dokumen sehari-hari yang kita baca, majalah, dan koran. Jadi, hierarki pada sebuah website merupakan hal yang penting. Tentu elemen yang terdapat pada HTML perlu kita kelompokkan menjadi beberapa bagian.
 
-![Gambar](Semantic HTML.jpeg)
+![Gambar](SemanticHTML.jpeg)
 
 Kita dapat menggunakan beberapa elemen dalam HTML untuk mengelompokkan sebuah elemen dengan jelas dan memiliki arti (semantic meaning). Elemen-elemen ini memiliki nama sesuai dengan fungsi atau peran dari elemen tersebut.
 
@@ -110,7 +110,7 @@ Kita dapat menggunakan beberapa elemen dalam HTML untuk mengelompokkan sebuah el
 
 ### Semantic VS Non-Semantic HTML
 
-![Gambar](Semantic vs Non Semantic.png)
+![Gambar](Semantic-NonSemantic.png)
 
 #### Generic Elements
 HTML menyediakan dua tipe elemen umum (generic element) yang bisa kita kustomisasi untuk menggambarkan konten kita dengan tepat, yaitu div dan span. Elemen ini akan terlibat jika tidak ada semantic element sesuai di HTML.
