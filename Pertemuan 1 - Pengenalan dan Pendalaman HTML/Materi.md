@@ -106,16 +106,16 @@ Website memiliki hierarki konten yang sama seperti dokumen sehari-hari yang kita
 
 Kita dapat menggunakan beberapa elemen dalam HTML untuk mengelompokkan sebuah elemen dengan jelas dan memiliki arti (semantic meaning). Elemen-elemen ini memiliki nama sesuai dengan fungsi atau peran dari elemen tersebut.
 
-![Gambar](Semantic Meaning.jpeg)
+![Gambar](SemanticMeaning.jpeg)
 
 ### Semantic VS Non-Semantic HTML
 
 ![Gambar](Semantic-NonSemantic.png)
 
-#### Generic Elements
+### Generic Elements
 HTML menyediakan dua tipe elemen umum (generic element) yang bisa kita kustomisasi untuk menggambarkan konten kita dengan tepat, yaitu div dan span. Elemen ini akan terlibat jika tidak ada semantic element sesuai di HTML.
 
-- Div
+1. Div
 Elemen `<div>` merupakan sebuah wadah (container) yang bersifat umum untuk menampung beberapa konten. Elemen ini tidak akan memberikan efek apa pun pada konten atau layout sebelum menerapkan sebuah style menggunakan CSS.
 
 ```html
@@ -137,7 +137,7 @@ Elemen `<div>` merupakan sebuah wadah (container) yang bersifat umum untuk menam
 </html>
 ```
 
-- Span
+2. Span
 Elemen `<span>` memberikan manfaat yang sama seperti `<div>`, bedanya elemen ini digunakan sebagai phrase elements dan tidak terdapat line breaks ketika menggunakannya. Sederhananya, `<span>` merupakan sebuah `<div>` yang digunakan dalam sebuah baris teks yang dapat diwadahi oleh paragraf, list, heading, atau lainnya.
 
 ```html
