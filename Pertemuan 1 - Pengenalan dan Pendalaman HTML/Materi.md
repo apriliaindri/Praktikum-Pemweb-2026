@@ -2,6 +2,7 @@
 
 ## Pengertian HTML 
 ![Gambar](HTML.png)
+
 HTML (HyperText Markup Language) adalah bahasa dasar untuk membuat halaman web. HTML digunakan untuk menyusun elemen-elemen dalam sebuah halaman agar dapat ditampilkan di browser.
 
 ### Anatomi Elemen HTML 
