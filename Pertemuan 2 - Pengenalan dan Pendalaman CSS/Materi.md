@@ -521,3 +521,536 @@ Universal selector digunakan untuk menargetkan seluruh elemen dalam dokumen HTML
   padding: 20px;
 }
 ```
+
+## Box Model 
+
+![Gambar](Box-Model.jpeg) 
+
+Setiap elemen yang dibuat pada HTML akan menciptakan sebuah kotak untuk menampung kontennya. Layaknya bentuk kotak pada umumnya, ada beberapa nilai atau komponen padanya.
+
+- Lebar dan tinggi pada kotak (konten).
+- Ruang kosong antara konten dengan border (padding).
+- Garis tepi (border).
+- Jarak dari elemen lain (margin).
+
+Pada CSS, kita dapat mengatur nilai-nilai tersebut. Inilah yang disebut dengan box model.
+
+## Apa itu Box Element
+
+![Gambar](Box-Element.jpeg) 
+
+Sebagaimana yang kita lihat pada gambar di atas, setiap elemen pada HTML, baik block-level maupun inline-level, akan menghasilkan kotak elemen.
+
+Berikut adalah penjelasan dari gambar di atas.
+
+- Content: konten dari elemen itu sendiri.
+- Padding: area yang menjadi jarak antara border elemen dengan konten yang ditampilkan.
+- Border: garis yang mencakup konten beserta padding.
+- Margin: area jarak di luar border.
+- Edge of Element: batas dari suatu elemen.
+
+## Box Model: Box Dimensions
+
+Konsep pertama yang akan kita bahas pada box model adalah dimensi dari elemen. Tidak hanya dimensi, kita juga akan membahas beberapa hal yang berkaitan dengan konten seperti overflow content dan box-sizing. Apa itu mereka dan bagaimana penerapannya? Mari kita pelajari bersama.
+
+### Dimension 
+
+Standarnya, sebuah box yang dihasilkan tiap elemen selalu cukup untuk menampung konten. Namun, kita dapat mengatur nilai dimensi dari box tersebut dengan properti width dan height.
+
+Cara yang paling banyak digunakan dalam menentukan dimensi kotak adalah menggunakan piksel, persentase, atau em. Secara tradisional, piksel merupakan cara yang paling populer karena kita dapat merancang dan mengontrol ukuran secara akurat.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus officiis perspiciatis quidem
+        ratione? Distinctio eos ex expedita iusto necessitatibus velit, veritatis. Aliquid, debitis
+        dignissimos in iusto magnam nulla sed tempora.
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+Contoh dengan piksel dan persentase: 
+
+```css 
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: #11c5c6;
+  font-size: 20px;
+}
+
+p {
+  height: 75%;
+  width: 75%;
+  background-color: #fbdd1c;
+}
+```
+
+Contoh dengan em: 
+
+```css 
+.box {
+  width: 15em;
+  height: 15em;
+  background-color: #11c5c6;
+  font-size: 20em;
+}
+
+p {
+  width: 11.25em;
+  height: 11.25em;
+  background-color: #fbdd1c;
+}
+```
+
+### Limiting Dimension
+
+Beberapa website yang ada sekarang menampilkan layout yang dapat melebar dan menyempit mengikuti ukuran layar pengguna. Pada prinsip tampilan tersebut, mungkin kita memerlukan sebuah limitasi ukuran yang harus ditetapkan agar konten selalu ditampilkan secara proporsional. Untuk melakukannya kita manfaatkan properti `min-width` dan `max-width`.
+
+- `min-width`: menetapkan nilai lebar minimal yang harus dimiliki elemen.
+- `max-width`: menetapkan nilai lebar maksimal yang harus dimiliki elemen.
+
+Keduanya merupakan properti yang sangat membantu untuk memastikan konten halaman dapat terbaca oleh pengguna (terutama ketika pengguna menggunakan ponsel). Misalnya, kita dapat menggunakan properti `max-width` untuk memastikan bahwa baris teks yang muncul tidak terlalu lebar.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eius explicabo fuga
+        iusto magni minus odit praesentium, quasi quisquam quos repellat suscipit tempora tenetur?
+        Assumenda cum laborum officiis quos ratione.
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+```css
+.content {
+  max-width: 800px;
+  height: 400px;
+
+  margin-left: auto;
+  margin-right: auto;
+  background-color: deeppink;
+}
+
+p {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+```
+
+### Overflowing Content
+
+Dimensi box yang dihasilkan elemen selalu cukup untuk menampung konten, tetapi hal ini tidak berlaku jika kita tetapkan secara manual panjang dan lebarnya. Tak jarang terjadi overflow ketika kita menerapkan ukuran pada elemen dengan konten di dalamnya yang begitu banyak.
+
+Contohnya:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium amet corporis
+        cupiditate dignissimos error expedita explicabo facere facilis, ipsam itaque libero modi
+        officiis optio perspiciatis provident quam sequi voluptatem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut corporis facere harum
+        inventore iure, quisquam recusandae reprehenderit veritatis voluptatum. Ducimus
+        exercitationem illo nam sapiente suscipit, tenetur ullam ut voluptas!
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+```css
+div {
+  height: 200px;
+  width: 200px;
+  background-color: lightgreen;
+}
+```
+
+Untuk menangani kasus seperti ini kita bisa gunakan properti overflow, properti ini dapat bernilai berikut: 
+
+1. visible 
+
+Visible merupakan nilai default pada properti ini. Konten yang tidak tertampung (overflow) akan tetap ditampilkan seperti pada standarnya.
+
+2. hidden
+
+Jika terjadi overflow, konten yang tidak tertampung akan disembunyikan.
+
+3. scroll
+
+Memunculkan scroll bar pada pinggir elemen sehingga konten yang tidak tertampung akan ditampilkan dengan scroll bar. Jika menggunakan nilai ini, scroll bar akan tetap muncul walaupun konten tidak terjadi overflow.
+
+4. auto
+
+Sama seperti scroll, hanya jika tidak terjadi overflow, nilai visible yang akan diterapkan. 
+
+Berikut adalah contoh penerapan seluruh nilai properti ini.
+
+![Gambar](Properti-Overflow.jpeg) 
+
+## Box Model: Border
+
+Border merupakan sebuah garis yang mengelilingi area konten dan padding (opsional). Kita bisa mengatur tipe, ketebalan, serta warna garis yang ditampilkan sesuai dengan yang kita inginkan. Kita juga bisa mengatur dalam menampilkan sebagian atau keseluruhan garis pada elemen. Mari kita eksplorasi properties yang dapat mengatur border.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+```
+
+```css
+.box {
+  border-top-style: solid;
+  border-right-style: dotted;
+  border-bottom-style: groove;
+  border-left-style: double;
+
+  border-width: 4px;
+  border-color: red;
+  width: 200px;
+  height: 50px;
+}
+```
+
+## Box Model: Padding 
+
+Padding merupakan jarak antara area konten dan border. Padding banyak diterapkan pada elemen jika elemen tersebut menerapkan warna latar atau pun border. Padding memberikan sedikit ruang sehingga konten di dalam elemen dapat lebih nyaman untuk ditampilkan.
+
+Berikut adalah contoh implementasi dari padding.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae commodi
+      dignissimos eaque fugiat inventore maiores neque nisi sint.
+    </p>
+    <p class="example">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda blanditiis cum
+      dignissimos enim esse excepturi illum inventore maiores minima, nemo nisi obcaecati officia
+      pariatur qui quibusdam sed. Ab, dolorum?
+    </p>
+  </body>
+</html>
+```
+
+```css
+p {
+  border: 4px solid #00a2c6;
+  width: 350px;
+}
+
+p.example {
+  padding: 10px;
+}
+```
+
+## Box Model: Margin
+
+Seperti padding, margin merupakan ruang atau jarak pada sebuah elemen. Namun, jarak tersebut terletak diluar dari konten dan border element. Margin digunakan untuk menjaga elemen agar tidak bertabrakan satu sama lain atau dari tepi jendela browser.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae commodi
+      dignissimos eaque fugiat inventore maiores neque nisi sint.
+    </p>
+    <p class="example">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda blanditiis cum
+      dignissimos enim esse excepturi illum inventore maiores minima, nemo nisi obcaecati officia
+      pariatur qui quibusdam sed. Ab, dolorum?
+    </p>
+  </body>
+</html>
+```
+
+```css
+p {
+  border: 4px solid #00a2c6;
+  width: 350px;
+  margin: 20px;
+}
+
+p.example {
+  padding: 10px;
+}
+```
+
+**Sebelum menerapkan margin:**
+
+![Gambar](Without-Margin.jpeg) 
+
+**Setelah menerapkan margin:** 
+
+![Gambar](Margin.jpeg) 
+
+## Box Model: Centering Content 
+
+Jika kita ingin membuat sebuah kotak berada tepat pada tengah sebuah halaman atau di dalam elemen induknya, margin kanan dan kiri bisa diatur dengan nilai auto. Untuk membuat kotak berada di tengah kita juga harus menentukan lebar dari kotak tersebut (menggunakan properti width). Jika tidak, kotak akan mengambil lebar penuh pada halaman atau induk elemen.
+
+Setelah kita menentukan lebar kotak dan mengatur margin kiri dan kanan menjadi auto, secara otomatis browser akan memberi jarak yang sama di setiap sisi horizontal kotak sehingga membuat kotak berada di tengah halaman.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+        autem commodi dignissimos dolores ea, eaque, earum esse harum illo in
+        incidunt molestias nam non qui recusandae sunt ullam veniam vero!
+      </p>
+    </div>
+
+    <div class="box center">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ea,
+        id. Aliquid consectetur dolorum exercitationem ipsam, necessitatibus
+        nostrum pariatur sunt! Accusantium architecto at dolorem itaque quisquam
+        quod soluta sunt voluptatum.
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+```css
+.box {
+  width: 50%;
+  border: 4px solid darkblue;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.box.center {
+  margin: 0 auto;
+}
+```
+
+## Box-Sizing 
+
+Sebelum CSS3, ukuran lebar dan panjang elemen mengacu pada konten elemen (content-box). Itu berarti ukuran elemen seluruhnya merupakan nilai panjang (width) dan lebar (height) yang kita spesifikasikan ditambah dengan nilai padding dan border yang diterapkan pada elemen.
+
+Dengan menggunakan properti box-sizing, kita dapat menentukannya berdasarkan border box, di mana ukuran elemen sudah termasuk content, padding dan border. Dengan metode ini, hasil elemen yang ditampilkan (termasuk padding dan border) akan memiliki dimensi yang sama persis seperti yang kita tentukan.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Judul Dokumen</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="content"></div>
+    <p>
+      Elemen menerapkan <code>box-sizing: content-box;</code> Ukuran box secara keseluruhan akan
+      menjadi 260px lebar, 260px tinggi; 260 = 200 + 20 + 20 + 10 + 10
+    </p>
+    <br />
+    <div class="box"></div>
+    <p>
+      Elemen menerapkan <code>box-sizing: border-box;</code> Ukuran box akan tetap 200px lebar,
+      200px tinggi meskipun menerapkan padding dan border
+    </p>
+  </body>
+</html>
+```
+
+```css
+div {
+  height: 200px;
+  width: 200px;
+  background-color: lightgreen;
+  border: 10px solid cornflowerblue;
+  padding: 20px;
+}
+
+.content {
+  box-sizing: content-box;
+}
+
+.box {
+  box-sizing: border-box;
+}
+```
+
+## Flexbox 
+
+
+### Apa itu Flexbox?
+
+Flexbox (Flexible Box Layout) adalah teknik CSS yang mempermudah pengaturan layout elemen secara fleksibel. Dengan Flexbox, kamu bisa menyusun elemen secara horizontal atau vertikal tanpa perlu repot pakai float atau position.
+
+### Cara Menggunakan Flexbox 
+
+Untuk mengaktifkan Flexbox, cukup tambahkan display: flex; pada elemen pembungkus (container). Contoh:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background-color: lightgray;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>
+```
+
+**Properti Penting dalam Flexbox**
+
+| Properti          | Kegunaan                                                   |
+|-------------------|------------------------------------------------------------|
+| `display: flex;`    | Mengaktifkan Flexbox                                 |
+| `justify-content`   | Mengatur posisi elemen secara horizontal                   |
+| `align-items`       | Mengatur posisi elemen secara vertikal                     |
+| `flex-direction`    | Menentukan susunan elemen (baris atau kolom)               |
+| `flex-wrap`         | Mengatur apakah elemen tetap satu baris atau pindah baris  |
+
+## CSS Grid 
+
+### Apa itu CSS Grid?
+
+CSS Grid adalah teknik layout yang lebih kuat daripada Flexbox karena bisa mengatur baris dan kolom secara bersamaan.
+
+### Cara Menggunakan CSS Grid
+
+Untuk menggunakan Grid, cukup tambahkan display: grid; pada elemen pembungkus, lalu atur jumlah kolom dengan grid-template-columns. Contoh:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            background-color: lightblue;
+            padding: 10px;
+        }
+        .box {
+            background-color: coral;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+</html>
+```
+
+**Properti Penting dalam CSS Grid**
+
+| Properti               | Fungsi                                      |
+|------------------------|---------------------------------------------|
+| `display: grid;`         | Mengaktifkan Grid                           |
+| `grid-template-columns`  | Menentukan jumlah kolom                     |
+| `grid-template-rows`     | Menentukan jumlah baris                     |
+| `gap`                    | Jarak antar elemen                          |
+| `justify-items`          | Mengatur posisi elemen secara horizontal    |
+| `align-items`            | Mengatur posisi elemen secara vertikal      |
+
+## Kesimpulan
+
+- CSS adalah bahasa untuk menghias website.
+- Ada 3 cara menulis CSS: inline, internal, dan eksternal.
+- Flexbox dan Grid dapat mempermudah pengaturan layout halaman.
+- Dengan Flexbox dan Grid, elemen bisa lebih rapi, sejajar, dan mudah diatur.
+- Box Model sebuah kotak untuk menampung kontennya.
