@@ -553,7 +553,7 @@ Berikut adalah penjelasan dari gambar di atas.
 
 Konsep pertama yang akan kita bahas pada box model adalah dimensi dari elemen. Tidak hanya dimensi, kita juga akan membahas beberapa hal yang berkaitan dengan konten seperti overflow content dan box-sizing. Apa itu mereka dan bagaimana penerapannya? Mari kita pelajari bersama.
 
-### Dimension 
+### 1. Dimension 
 
 Standarnya, sebuah box yang dihasilkan tiap elemen selalu cukup untuk menampung konten. Namun, kita dapat mengatur nilai dimensi dari box tersebut dengan properti width dan height.
 
@@ -614,7 +614,7 @@ p {
 }
 ```
 
-### Limiting Dimension
+### 2. Limiting Dimension
 
 Beberapa website yang ada sekarang menampilkan layout yang dapat melebar dan menyempit mengikuti ukuran layar pengguna. Pada prinsip tampilan tersebut, mungkin kita memerlukan sebuah limitasi ukuran yang harus ditetapkan agar konten selalu ditampilkan secara proporsional. Untuk melakukannya kita manfaatkan properti `min-width` dan `max-width`.
 
@@ -660,7 +660,7 @@ p {
 }
 ```
 
-### Overflowing Content
+### 3. Overflowing Content
 
 Dimensi box yang dihasilkan elemen selalu cukup untuk menampung konten, tetapi hal ini tidak berlaku jika kita tetapkan secara manual panjang dan lebarnya. Tak jarang terjadi overflow ketika kita menerapkan ukuran pada elemen dengan konten di dalamnya yang begitu banyak.
 
@@ -702,19 +702,19 @@ div {
 
 Untuk menangani kasus seperti ini kita bisa gunakan properti overflow, properti ini dapat bernilai berikut: 
 
-1. visible 
+**1. visible**
 
 Visible merupakan nilai default pada properti ini. Konten yang tidak tertampung (overflow) akan tetap ditampilkan seperti pada standarnya.
 
-2. hidden
+**2. hidden**
 
 Jika terjadi overflow, konten yang tidak tertampung akan disembunyikan.
 
-3. scroll
+**3. scroll**
 
 Memunculkan scroll bar pada pinggir elemen sehingga konten yang tidak tertampung akan ditampilkan dengan scroll bar. Jika menggunakan nilai ini, scroll bar akan tetap muncul walaupun konten tidak terjadi overflow.
 
-4. auto
+**4. auto**
 
 Sama seperti scroll, hanya jika tidak terjadi overflow, nilai visible yang akan diterapkan. 
 
