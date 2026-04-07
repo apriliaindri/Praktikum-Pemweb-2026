@@ -22,7 +22,7 @@ Tugas dikumpulkan dalam 2 format:
 2. Source code dalam bentuk file ZIP yang berisi file HTML dan CSS dengan nama berkas **PPW_Kelas_01_NIM_NamaLengkap.zip**
 
 
-[📌 Download Template Laporan](https://github.com/apriliaindri/Praktikum-Pemweb-2026/blob/main/Pertemuan%203%20-%20Pengenalan%20dan%20Pendalaman%20CSS/PPW_Kelas_XX_NIM_NamaLengkap.docx)
+[📌 Download Template Laporan](https://raw.githubusercontent.com/apriliaindri/Praktikum-Pemweb-2026/main/Pertemuan%203%20-%20Pengenalan%20dan%20Pendalaman%20CSS/PPW_Kelas_XX_NIM_NamaLengkap.docx)
 
 
 ## Tenggat Waktu Pengerjaan
