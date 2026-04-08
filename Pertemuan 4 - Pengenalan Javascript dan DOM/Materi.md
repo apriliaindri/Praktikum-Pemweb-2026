@@ -283,4 +283,173 @@ for (let huruf of teks) {
 
 ## Fungsi
 
+Fungsi digunakan untuk membungkus kode agar dapat digunakan kembali.
+
+### 1. Deklarasi Fungsi (Klasik)
+
+Digunakan untuk mendefinisikan fungsi dengan nama tertentu.
+
+```javascript
+function halo(nama) {
+  return "Halo, " + nama;
+}
+
+console.log(halo("Budi"));
+// Output: Halo, Budi
+```
+
+### 2. Function Expression
+
+Function Expression adalah cara membuat fungsi dengan menyimpannya ke dalam variabel.
+
+```javascript
+const halo = function(nama) {
+  return "Halo, " + nama;
+};
+
+console.log(halo("Budi"));
+// Output: Halo, Budi
+```
+
+### 3. Arrow Function
+
+Arrow function adalah cara penulisan fungsi yang lebih singkat dibandingkan fungsi biasa.
+
+```javascript
+const halo = (nama) => {
+  return "Halo, " + nama;
+};
+
+console.log(halo("Budi"));
+// Output: Halo, Budi
+```
+Arrow function tidak memiliki `this` sendiri, sehingga tidak cocok digunakan pada object method yang membutuhkan `this`.
+```javascript
+const orang = {
+  nama: "Rani",
+  sapa: () => {
+    return "Halo, aku " + this.nama; // ❌ this undefined
+  }
+};
+```
+
 ## DOM (Document Object Model)
+
+### Apa itu DOM?
+
+DOM (Document Object Model) adalah representasi dari halaman web dalam bentuk struktur seperti pohon (tree) yang dapat dibaca dan dimanipulasi oleh JavaScript.
+
+### Contoh
+
+#### HTML
+
+```html
+<body>
+  <h1>Halo!</h1>
+  <p>Selamat datang di website</p>
+</body>
+```
+
+#### Struktur DOM
+
+```text
+Document
+└── html
+    └── body
+        ├── h1
+        └── p
+```
+
+### Mengakses HTML dengan DOM
+Ada beberapa cara untuk mengakses elemen HTML menggunakan DOM:
+
+| Cara | Fungsi |
+|------|--------|
+| `getElementById("id")` | Mengambil elemen berdasarkan id |
+| `getElementsByClassName("class")` | Mengambil semua elemen berdasarkan class |
+| `getElementsByTagName("tag")` | Mengambil semua elemen berdasarkan tag |
+| `querySelector("selector")` | Mengambil elemen pertama yang sesuai CSS selector |
+| `querySelectorAll("selector")` | Mengambil semua elemen yang sesuai CSS selector |
+
+### Mengubah Konten dan Properti dengan DOM
+
+Beberapa cara untuk mengubah konten dan properti elemen HTML menggunakan DOM:
+
+| Aksi | Contoh |
+|------|--------|
+| Mengubah teks | `element.textContent = "Halo!"` |
+| Mengubah HTML | `element.innerHTML = "Hai!"` |
+| Mengubah atribut | `element.setAttribute("href", "https://google.com")` |
+| Menghapus atribut | `element.removeAttribute("src")` |
+
+### Mengubah CSS dengan DOM
+
+CSS pada elemen HTML dapat diubah menggunakan properti `style` di JavaScript.
+
+```javascript
+const box = document.getElementById("kotak");
+
+// mengubah warna background
+box.style.backgroundColor = "red";
+
+// mengubah ukuran teks
+box.style.fontSize = "20px";
+```
+
+### Menambah dan Menghapus Elemen HTML
+
+Elemen HTML dapat ditambahkan atau dihapus menggunakan JavaScript melalui DOM.
+
+#### Contoh
+
+```javascript
+// membuat elemen baru
+const paragraf = document.createElement("p");
+paragraf.textContent = "Paragraf baru!";
+
+// menambahkan ke halaman
+document.body.appendChild(paragraf);
+
+// menghapus elemen
+paragraf.remove();
+```
+
+### Event Listener
+
+Event Listener adalah fungsi yang akan dijalankan ketika suatu event (kejadian) terjadi pada elemen HTML.
+
+#### Contoh Penggunaan
+
+- Klik tombol → menampilkan pesan  
+- Hover ke elemen → mengubah tampilan  
+- Input teks → menampilkan perubahan secara langsung  
+
+#### Bentuk Dasar
+
+```javascript
+element.addEventListener("event", function() {
+  // aksi
+});
+```
+
+Contoh Event Listener pada Javascript:
+```javascript
+const tombol = document.querySelector("#klik");
+
+tombol.addEventListener("click", function() {
+  alert("Tombol diklik!");
+});
+```
+
+#### Jenis-Jenis Event pada Event Listener
+
+| Event | Kapan Terjadi |
+|------|--------------|
+| `"click"` | Ketika elemen diklik |
+| `"mouseover"` | Saat kursor masuk ke elemen |
+| `"mouseout"` | Saat kursor keluar dari elemen |
+| `"keydown"` | Saat tombol keyboard ditekan |
+| `"keyup"` | Saat tombol keyboard dilepas |
+| `"input"` | Saat pengguna mengetik dalam input field |
+| `"submit"` | Saat form dikirim |
+| `"change"` | Saat isi input berubah (biasanya select, radio) |
