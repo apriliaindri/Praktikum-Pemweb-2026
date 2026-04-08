@@ -75,7 +75,147 @@ alert(text);
 
 ## Variabel & Tipe Data
 
+### Variabel 
+---
+Variabel digunakan untuk menyimpan data dalam JavaScript.
+
+### 1. `let` dan `var`
+
+Variabel dengan `let` dan `var` bersifat **mutable**, artinya nilainya dapat diubah.
+
+#### Contoh:
+
+```javascript
+let angka1 = 5;
+const angka2 = 2;
+
+angka1 += angka2;
+
+console.log(angka1);
+
+// Output: 7
+```
+
+### 2. `const`
+
+Variabel dengan  `const ` bersifat **immutable**, artinya tidak dapat diubah (tidak bisa di-assign ulang).
+
+#### Contoh:
+
+```javascript
+let angka1 = 5;
+const angka2 = 2;
+
+angka2 += angka1;
+
+console.log(angka1);
+
+// Output: Error
+```
+Meskipun bersifat immutable, variabel dengan `const` masih dapat digunakan untuk menyimpan array atau object, di mana isi (value) di dalamnya tetap dapat dimodifikasi.
+
+```javascript
+const buah = ['apel', 'jeruk'];
+
+buah.push('mangga');
+console.log(buah); 
+// Output: ['apel', 'jeruk', 'mangga']
+
+buah = ['pisang']; 
+console.log(buah); 
+// Output: Error
+```
+
+### Tipe Data
+---
+
+Tipe data digunakan untuk menentukan jenis nilai yang disimpan dalam variabel pada JavaScript. Berikut beberapa tipe data dasar dalam JavaScript:
+
+### 1. String
+String digunakan untuk menyimpan teks.
+
+```javascript
+let text = "Halo";
+```
+
+### 2. Number
+Number digunakan untuk menyimpan angka, baik bilangan bulat maupun desimal.
+
+```javascript
+let angka1 = 3;
+const angka2 = 4.21;
+```
+
+### 3. Boolean
+Boolean digunakan untuk menyimpan nilai logika, yaitu `true` atau `false`.
+
+```javascript
+let isAngka = true;
+```
+
+### 4. Undefined
+Undefined adalah nilai default dari variabel yang belum diberi nilai.
+
+```javascript
+let result;
+```
+
+### 5. Null
+Null digunakan untuk menyatakan bahwa sebuah variabel sengaja dikosongkan.
+
+```javascript
+let result = null;
+```
+
 ## Operator & Percabangan
+
+### Operator
+---
+Operator digunakan untuk melakukan operasi pada variabel dan nilai dalam JavaScript.
+
+### 1. Operator Aritmatika
+Digunakan untuk melakukan perhitungan matematika.
+
+```javascript
+let a = 1;
+let b = 2;
+let hasil = a + b;
+
+console.log(hasil); 
+// Output: 3
+```
+
+### 2. Operator Perbandingan 
+Digunakan untuk membandingkan dua nilai dan menghasilkan nilai boolean (`true` atau `false`).
+
+```javascript
+5 == '5';    // true  (nilai sama, tipe diabaikan)
+5 === '5';   // false (nilai sama, tapi tipe berbeda)
+```
+
+### 3. Operator Logika 
+Digunakan untuk operasi logika.
+
+```javascript
+true && false;   // false (AND)
+true || false;   // true  (OR)
+!true;           // false (NOT)
+```
+
+### Percabangan
+---
+Percabangan adalah struktur yang digunakan untuk mengambil keputusan berdasarkan kondisi tertentu.
+
+```javascript
+let nilai = 80;
+const kkm = 75;
+
+if (nilai >= kkm) {
+  console.log('Anda lulus');
+} else {
+  console.log('Maaf, tidak lulus');
+}
+```
 
 ## Perulangan (Looping)
 
