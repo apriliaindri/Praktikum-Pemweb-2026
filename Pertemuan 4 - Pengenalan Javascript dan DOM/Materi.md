@@ -218,6 +218,68 @@ if (nilai >= kkm) {
 ```
 
 ## Perulangan (Looping)
+Perulangan adalah struktur dalam pemrograman yang digunakan untuk menjalankan suatu perintah secara berulang selama kondisi tertentu terpenuhi.
+
+### 1. Perulangan `for`
+Perulangan `for` digunakan untuk menjalankan kode secara berulang dengan jumlah yang sudah ditentukan.
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+  console.log("Perulangan ke-" + i);
+}
+```
+
+### 2. Perulangan `while`
+
+Perulangan `while` digunakan untuk menjalankan kode selama kondisi bernilai true.
+
+```javascript
+let angka = 1;
+
+while (angka <= 3) {
+  console.log("Angka: " + angka);
+  angka++;
+}
+```
+
+### 3. Perulangan `for...in`
+
+Perulangan `for...in` digunakan untuk mengakses properti (key) dari sebuah object.
+
+```javascript
+let siswa = {
+  nama: "Dina",
+  umur: 13,
+  kelas: "8A"
+};
+
+for (let key in siswa) {
+  console.log(key + ": " + siswa[key]);
+}
+```
+
+### 4. Perulangan `for...of`
+
+Perulangan `for...of` digunakan untuk mengambil nilai dari array atau string.
+
+#### Contoh dengan array:
+
+```javascript
+let buah = ["apel", "jeruk", "mangga"];
+
+for (let item of buah) {
+  console.log(item);
+}
+```
+#### Contoh dengan string:
+
+```javascript
+let teks = "Halo";
+
+for (let huruf of teks) {
+  console.log(huruf);
+}
+```
 
 ## Fungsi
 
