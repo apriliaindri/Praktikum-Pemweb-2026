@@ -371,6 +371,45 @@ Ada beberapa cara untuk mengakses elemen HTML menggunakan DOM:
 | `querySelector("selector")` | Mengambil elemen pertama yang sesuai CSS selector |
 | `querySelectorAll("selector")` | Mengambil semua elemen yang sesuai CSS selector |
 
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar DOM</title>
+</head>
+<body>
+
+  <h1 id="judul">Halo Dunia</h1>
+  <p class="teks">Paragraf 1</p>
+  <p class="teks">Paragraf 2</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+```javascript
+// 1. getElementById → ambil 1 elemen berdasarkan id
+const judul = document.getElementById("judul");
+console.log("getElementById:", judul);
+
+// 2. getElementsByClassName → ambil banyak elemen (HTMLCollection)
+const teks = document.getElementsByClassName("teks");
+console.log("getElementsByClassName:", teks);
+
+// 3. getElementsByTagName → ambil berdasarkan tag (HTMLCollection)
+const paragraf = document.getElementsByTagName("p");
+console.log("getElementsByTagName:", paragraf);
+
+// 4. querySelector → ambil 1 elemen pertama (pakai selector CSS)
+const firstTeks = document.querySelector(".teks");
+console.log("querySelector:", firstTeks);
+
+// 5. querySelectorAll → ambil semua elemen (NodeList)
+const semuaTeks = document.querySelectorAll(".teks");
+console.log("querySelectorAll:", semuaTeks);
+```
+
 ### Mengubah Konten dan Properti dengan DOM
 
 Beberapa cara untuk mengubah konten dan properti elemen HTML menggunakan DOM:
@@ -381,6 +420,48 @@ Beberapa cara untuk mengubah konten dan properti elemen HTML menggunakan DOM:
 | Mengubah HTML | `element.innerHTML = "Hai!"` |
 | Mengubah atribut | `element.setAttribute("href", "https://google.com")` |
 | Menghapus atribut | `element.removeAttribute("src")` |
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar DOM</title>
+</head>
+<body>
+
+  <h1 id="judul">Halo Dunia</h1>
+  <p id="paragraf">Paragraf asli</p>
+  <a id="link" href="https://example.com">Kunjungi Website</a>
+  <br><br>
+  <img id="gambar" src="gambar.png" alt="Gambar">
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
+```javascript
+// 1. Mengubah teks
+const judul = document.getElementById("judul");
+judul.textContent = "Halo, JavaScript!";
+console.log("Judul:", judul.textContent);
+
+// 2. Mengubah HTML
+const paragraf = document.getElementById("paragraf");
+paragraf.innerHTML = "<strong>Paragraf diubah dengan HTML!</strong>";
+console.log("Paragraf:", paragraf.innerHTML);
+
+// 3. Mengubah atribut
+const link = document.getElementById("link");
+link.setAttribute("href", "https://google.com");
+console.log("Link baru:", link.href);
+
+// 4. Menghapus atribut
+const gambar = document.getElementById("gambar");
+gambar.removeAttribute("src");
+console.log("Sumber gambar:", gambar.getAttribute("src"));
+```
 
 ### Mengubah CSS dengan DOM
 
@@ -432,12 +513,62 @@ element.addEventListener("event", function() {
 });
 ```
 
-Contoh Event Listener pada Javascript:
-```javascript
-const tombol = document.querySelector("#klik");
+Contoh:
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listener</title>
+</head>
+<body>
 
+  <h1>Event Listener</h1>
+
+  <input type="text" id="inputTeks" placeholder="Ketik sesuatu...">
+  <button id="klik">Tampilkan Pesan</button>
+
+  <form id="formDemo">
+    <input type="text" placeholder="Nama">
+    <button type="submit">Kirim</button>
+  </form>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
+```javascript
+// Ambil elemen
+const tombol = document.querySelector("#klik");
+const inputTeks = document.querySelector("#inputTeks");
+const formDemo = document.querySelector("#formDemo");
+
+// Klik tombol → baca input
 tombol.addEventListener("click", function() {
-  alert("Tombol diklik!");
+  const teks = inputTeks.value;
+  alert("Kamu mengetik: " + teks);
+});
+
+// Hover input teks
+inputTeks.addEventListener("mouseover", function() {
+  inputTeks.style.backgroundColor = "lightyellow";
+});
+
+inputTeks.addEventListener("mouseout", function() {
+  inputTeks.style.backgroundColor = "";
+});
+
+// Input realtime (console log)
+inputTeks.addEventListener("input", function() {
+  console.log("Isi input: " + inputTeks.value);
+});
+
+// Submit form
+formDemo.addEventListener("submit", function(e) {
+  e.preventDefault(); // cegah reload
+  alert("Form dikirim!");
 });
 ```
 
