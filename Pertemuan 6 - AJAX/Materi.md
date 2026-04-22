@@ -28,9 +28,32 @@ Biasanya alur kerja AJAX adalah sebagai berikut:
 ```javascript
 fetch("https://jsonplaceholder.typicode.com/posts") // Mengambil data dari API
   .then((response) => response.json()) // Mengubah response menjadi format JSON
-  .then((data) => console.log(data)) // Mengolah data yang diterima
+  .then((data) => console.log(data)) // Mengolah data yang diterima melalui console
   .catch((error) => console.error("Error:", error)); // Menangani error
 ```
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Contoh Fetch API</title>
+</head>
+<body>
+
+<h2>Contoh Fetch API</h2>
+
+<script>
+fetch("https://jsonplaceholder.typicode.com/users") // Mengambil data dari API
+  .then((response) => response.json()) // Mengubah response menjadi format JSON
+  .then((data) => console.log(data)) // Mengolah data yang diterima melalui console
+  .catch((error) => console.error("Error:", error)); // Menangani error
+</script>
+
+</body>
+</html>
+```
+
 ### Penjelasan
 
 - `response.json()` : Mengonversi response menjadi format JSON (digunakan ketika data dari API berformat JSON).  
