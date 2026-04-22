@@ -56,9 +56,14 @@ fetch("https://jsonplaceholder.typicode.com/users") // Mengambil data dari API
 
 ### Penjelasan
 
-- `response.json()` : Mengonversi response menjadi format JSON (digunakan ketika data dari API berformat JSON).  
-- `response.text()` : Digunakan untuk membaca response berupa teks biasa.  
-- `.then()` : Digunakan untuk menangani hasil Promise setelah request selesai.
+- `fetch()` : Mengirim request ke server (API) untuk mengambil data secara asynchronous.
+- `response` : Hasil awal dari request, masih berupa data mentah (belum bisa langsung digunakan).
+- `response.json()` : Mengonversi response menjadi format JSON agar bisa dibaca oleh JavaScript.
+- `response.text()` : Digunakan untuk membaca response dalam bentuk teks biasa.
+- `.then()` : Menjalankan proses lanjutan setelah Promise berhasil.
+- `data` : Data hasil konversi dari response yang siap digunakan (biasanya object/array).
+- `console.log()` : Menampilkan data ke console browser.
+- `.catch()` : Menangani error jika request gagal.
 
 
 # Fetch Local File (XML atau Teks)
@@ -80,12 +85,12 @@ Anda dapat menggunakan `fetch()` untuk mengirim permintaan **POST** ke server, m
 
 ```javascript
 const data = {
-  username: "Addin",
-  email: "Addin@sidoarjo.com",
+  username: "April",
+  email: "april@gmail.com",
 };
 
 fetch("https://example.com/submit", {
-  method: "POST",
+  method: "POST", // Mengirim data ke server
   headers: {
     "Content-Type": "application/json", // Memberitahu server bahwa data dalam format JSON
   },
