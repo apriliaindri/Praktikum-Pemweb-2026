@@ -143,8 +143,8 @@ Dengan menggunakan jQuery, proses melakukan request AJAX GET menjadi lebih mudah
 <script>
   $('#sendData').on('click', function() {
     var jsonData = {
-      username: 'addin',
-      email: 'addin@sidoarjo.com'
+      username: 'audin',
+      email: 'audin@gmail.com'
     };
 
     $.ajax({
@@ -202,7 +202,7 @@ jQuery mempermudah penggunaan AJAX, terutama dalam menangani kompatibilitas anta
 ```
 ### Penjelasan
 
-- `$(this).serialize()` : Mengubah data form menjadi format string `key=value` (contoh: `username=addin&email=addin@sidoarjo.com`).  
+- `$(this).serialize()` : Mengubah data form menjadi format string `key=value` (contoh: `username=audin&email=audin@gmail.com`).  
 - `$.ajax()` : Digunakan untuk mengirim request AJAX, dalam contoh ini menggunakan metode POST dengan data dari form.
 
 # Contoh Program Sederhana
