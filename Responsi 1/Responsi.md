@@ -39,4 +39,7 @@ Tugas dikumpulkan dalam 2 format:
 
 ## Tenggat Waktu Pengerjaan
 
-Tenggat waktu pengerjaan Responsi adalah hari **Kamis, 28 Mei 2026, pukul 23.59.**
+Tenggat waktu pengerjaan Responsi adalah hari **Kamis, 21 Mei 2026, pukul 23.59.**
+
+> note: Pengumpulan tugas otomatis ditutup apabila sudah melawati tenggat waktu!
+
