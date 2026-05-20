@@ -17,7 +17,6 @@ echo "Hello World!";
 ?>
 ```
 
-<br></br>
 ## Variabel & Tipe Data
 
 ### Variabel
@@ -39,7 +38,6 @@ $nama = "Ayu"; // string
 $aktif = true; // boolean
 ```
 
-<br></br>
 ## Kondisi 
 
 ### IF, ELSE, dan ELSEIF
@@ -53,7 +51,6 @@ if (kondisi) {
 }
 ```
 
-<br></br>
 `if` tidak harus selalu berpasangan dengan `else`. Kita bisa menggunakan `if` saja tanpa harus mencantumkan `else`. Sebagai contoh:
 ```
 $umur = 17;
@@ -65,7 +62,6 @@ if ($umur >= 18) {
 echo "Kamu punya akses!"
 ```
 
-<br></br>
 Jika memiliki beberapa kondisi, kita bisa menggunakan `elseif`. Sebagai contoh:
 ```
 $nilai = 75;
@@ -106,7 +102,6 @@ switch ($nilai) {
 }
 ```
 
-<br></br>
 ## Perulangan (Loop)
 
 Perulangan digunakan untuk menjalankan kode yang sama berulang kali, tanpa harus menulis ulang kodenya.
@@ -163,7 +158,6 @@ foreach ($buah as $item) {
 ?>
 ```
 
-<br></br>
 ## Function
 
 Function adalah blok kode yang bisa dipanggil berkali-kali. Daripada menulis ulang suatu kode, kita bisa menuliskan kode yang ingin kita gunakan berulang kali di dalam function, kemudian kita cukup memanggil function itu aja. 
@@ -178,7 +172,6 @@ function nama_fungsi() {
 nama_fungsi();
 ```
 
-<br></br>
 Contoh function sederhana:
 ```
 function jumlah($a, $b) {
@@ -189,7 +182,6 @@ $hasil = jumlah(5, 3);
 echo $hasil;  // Output: 8
 ```
 
-<br></br>
 ## MySQL
 
 MySQL adalah tempat menyimpan data (seperti nama pengguna, email, dll).
@@ -345,7 +337,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 ?>
 ```
 
-<br></br>
 ## Contoh: Membuat Daftar Tamu Sederhana
 ### Fitur yang Akan Dibuat
 1. Form input buku tamu: nama & pesan
