@@ -8,7 +8,6 @@
 - Bahkan hampir mayoritas kebanyakan web di dunia dibuat menggunakan PHP
 - PHP pertama kali dibuat oleh Rasmus Lerdorf pada tahun 1995
 
-<br></br>
 ## Penulisan Kode PHP
 
 Kode PHP ditulis di antara tag `<?php ... ?>`. Sebagai contoh:
