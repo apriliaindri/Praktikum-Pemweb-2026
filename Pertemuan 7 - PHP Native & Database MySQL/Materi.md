@@ -245,7 +245,8 @@ CREATE TABLE orders (
 c. Menambahkan Data ke Dalam Tabel
 - Menambahkan data pengguna
 ```
-INSERT INTO users (nama) VALUES ('Ari');
+INSERT INTO users (nama, email, password)
+VALUES ('April', 'april@gmail.com', '12345');
 -- Misalnya id-nya 1
 ```
 - Menambahkan data pesanan
