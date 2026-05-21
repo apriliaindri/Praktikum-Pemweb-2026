@@ -56,10 +56,10 @@ if (kondisi) {
 $umur = 17;
 
 if ($umur >= 18) {
-    return ('Kamu Belum Cukup Umur');
+    echo "Kamu punya akses!";
 }
 
-echo "Kamu punya akses!"
+echo "Program selesai";
 ```
 
 Jika memiliki beberapa kondisi, kita bisa menggunakan `elseif`. Sebagai contoh:
