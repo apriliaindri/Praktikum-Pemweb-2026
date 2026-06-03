@@ -372,11 +372,9 @@ Contohnya:
 - Mencegah terjadinya kesalahan pada proses selanjutnya, seperti penyimpanan data ke database atau pengolahan data oleh aplikasi
 
 ## Jenis Validasi
-1. Client-side validation
-Client-side validation adalah validasi yang dilakukan langsung di browser sebelum data dikirim ke server. Validasi ini biasanya menggunakan HTML5 atau JavaScript sehingga pengguna dapat langsung mengetahui jika terdapat kesalahan pada input yang diberikan.
+1. Client-side validation, yaitu validasi yang dilakukan langsung di browser sebelum data dikirim ke server. Validasi ini biasanya menggunakan HTML5 atau JavaScript sehingga pengguna dapat langsung mengetahui jika terdapat kesalahan pada input yang diberikan.
 
-3. Server-side validation
-Server-side validation adalah validasi yang dilakukan di server setelah formulir dikirim oleh pengguna. Pada praktikum ini, validasi dilakukan menggunakan PHP untuk memastikan data yang diterima benar dan aman untuk diproses lebih lanjut.
+2. Server-side validation, yaitu validasi yang dilakukan di server setelah formulir dikirim oleh pengguna. Pada praktikum ini, validasi dilakukan menggunakan PHP untuk memastikan data yang diterima benar dan aman untuk diproses lebih lanjut.
 
 ## Contoh Implementasi Form Validation
 Sekarang kita buat contoh form yang akan melakukan validasi:
