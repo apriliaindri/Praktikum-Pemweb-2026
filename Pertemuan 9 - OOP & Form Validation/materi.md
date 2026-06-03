@@ -289,24 +289,26 @@ header("Location: index.php");
 
 
 ## Apa itu Form Validation?
-Form Validation adalah proses memeriksa isi formulir (form) sebelum datanya diproses atau disimpan. Tujuannya adalah untuk memastikan data yang dimasukkan oleh pengguna sudah benar dan sesuai aturan.
+Form Validation adalah proses pengecekan data yang diinputkan pengguna pada sebuah formulir sebelum data tersebut diproses atau disimpan. Tujuannya adalah untuk memastikan data yang dimasukkan sudah sesuai dengan aturan yang ditentukan sehingga dapat mengurangi kesalahan dan menjaga kualitas data.
 
 Contohnya:
 - Nama tidak boleh kosong
 - Email harus berisi alamat email yang valid (misalnya: nama@email.com)
-- Password minimal 6 karakter
+- Password harus memiliki minimal 6 karakter
+- Nomor telepon hanya boleh berisi angka
 
 ## Kenapa Form Validation Penting?
-- Melindungi website dari data yang salah atau berbahaya
-- Membantu pengguna mengisi form dengan benar
-- Menghindari error di bagian proses berikutnya (misalnya saat simpan ke database)
+- Memastikan data yang dimasukkan pengguna sesuai dengan format dan aturan yang ditentukan
+- Membantu pengguna mengisi formulir dengan benar melalui pesan kesalahan yang informatif
+- Mengurangi risiko masuknya data yang tidak valid atau berpotensi membahayakan sistem
+- Mencegah terjadinya kesalahan pada proses selanjutnya, seperti penyimpanan data ke database atau pengolahan data oleh aplikasi
 
 ## Jenis Validasi
 1. Client-side validation
-Dicek langsung di browser (biasanya pakai JavaScript atau HTML5)
+Client-side validation adalah validasi yang dilakukan langsung di browser sebelum data dikirim ke server. Validasi ini biasanya menggunakan HTML5 atau JavaScript sehingga pengguna dapat langsung mengetahui jika terdapat kesalahan pada input yang diberikan.
 
-2. Server-side validation
-Dicek di server setelah form dikirim (pakai PHP dalam kasus kamu)
+3. Server-side validation
+Server-side validation adalah validasi yang dilakukan di server setelah formulir dikirim oleh pengguna. Pada praktikum ini, validasi dilakukan menggunakan PHP untuk memastikan data yang diterima benar dan aman untuk diproses lebih lanjut.
 
 ## Contoh Implementasi Form Validation
 Sekarang kita buat contoh form yang akan melakukan validasi:
@@ -434,7 +436,7 @@ if (count($errors) > 0) {
         <input type="text" name="nama" id="nama" required><br><br>
 
         <label for="email">Email:</label><br>
-        <input type="text" name="email" id="email" required><br><br>
+        <input type="email" name="email" id="email" required><br><br>
 
         <label for="password">Password:</label><br>
         <input type="password" name="password" id="password" required><br><br>
