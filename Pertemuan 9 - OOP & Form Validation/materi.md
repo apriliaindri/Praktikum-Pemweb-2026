@@ -30,32 +30,88 @@ $mobilSaya->jalan();
 Ada 4 konsep dasar pada OOP, yaitu:
 
 ### 1. Encapsulation
-Encapsulation adalah sebuah konsep yang digunakan untuk menyembunyikan data dari akses langsung luar class sehingga hanya bagian-bagian tertentu saja yang dapat di akses di luar class.
+Encapsulation merupakan konsep OOP yang digunakan untuk melindungi data agar tidak dapat diakses atau diubah secara langsung dari luar class. Akses terhadap data dilakukan melalui method yang telah disediakan sehingga keamanan data dapat terjaga.
 
 Terdapat 3 jenis access modifier dalam PHP yaitu: 
 - `public` -> Dapat di akses dari mana saja, baik dari dalam class maupun luar class.
 - `private` -> Hanya dapat di akses dari dalam class itu sendiri.
 - `protected` -> Hanya dapat di akses dari dalam class itu sendiri dan turunannya.
 
-Contoh:
+Contoh Penerapan: 
+Pada sistem login, password merupakan data yang bersifat sensitif sehingga tidak boleh diakses secara langsung. Oleh karena itu, password disimpan sebagai atribut private dan hanya dapat diubah atau ditampilkan melalui method tertentu.
+
+Contoh Code:
 ```
 class User {
-    private $password;
+    public $username = "admin";
+    private $password = "12345";
+    protected $email = "admin@gmail.com";
 
-    public function setPassword($pwd) {
-        $this->password = $pwd;
-    }
-
-    public function getPassword() {
-        return $this->password;
+    public function tampilkanData() {
+        echo "Username: " . $this->username . "";
+        echo "Password: " . $this->password . "";
+        echo "Email: " . $this->email . "";
     }
 }
+
+class Admin extends User {
+    public function tampilkanEmail() {
+        return $this->email;
+    }
+}
+
+$user = new User();
+
+// Public (bisa diakses dari luar class)
+echo $user->username . "";
+
+// Private (akan error jika diaktifkan)
+// echo $user->password;
+
+// Protected (akan error jika diaktifkan)
+// echo $user->email;
+
+$admin = new Admin();
+
+// Protected dapat diakses melalui class turunan
+echo $admin->tampilkanEmail();
 ```
 
 ### 2. Inheritance (Pewarisan)
-Inheritance adalah sebuah konsep dimana class baru (subclass) bisa mewarisi properti dan method dari class lain.
+Inheritance merupakan konsep OOP yang memungkinkan sebuah class mewarisi atribut dan method dari class lain. Class yang memberikan warisan disebut parent class (class induk), sedangkan class yang menerima warisan disebut child class (class turunan).
 
-Contoh:
+Konsep ini bertujuan untuk mengurangi penulisan kode yang berulang serta mempermudah pengembangan program karena class turunan dapat menggunakan kembali atribut dan method yang sudah dimiliki oleh class induk.
+
+Contoh Penerapan: 
+Dalam kehidupan sehari-hari, kucing merupakan salah satu jenis hewan. Oleh karena itu, kucing dapat mewarisi karakteristik dasar yang dimiliki oleh hewan, seperti kemampuan makan dan tidur.
+
+Contoh Code:
+```
+class Hewan {
+    public $nama = "Hewan";
+
+    public function makan() {
+        echo "Hewan sedang makan";
+    }
+}
+
+class Kucing extends Hewan {
+
+}
+
+$kucing = new Kucing();
+
+echo $kucing->nama . "";
+$kucing->makan();
+```
+
+### 3. Polymorphism
+Polymorphism adalah sebuah konsep dimana method memiliki kemampuan yang sama tetapi perilakunya berbeda tergantung objeknya.
+
+Contoh Penerapan: 
+Kucing dan anjing sama-sama merupakan hewan yang dapat mengeluarkan suara. Namun, suara yang dihasilkan masing-masing hewan berbeda. Dalam OOP, kondisi ini dapat direpresentasikan menggunakan method yang sama tetapi menghasilkan output yang berbeda pada setiap class.
+
+Contoh Code:
 ```
 class Hewan {
     public function suara() {
@@ -68,18 +124,24 @@ class Kucing extends Hewan {
         echo "Meong";
     }
 }
-```
 
-### 3. Polymorphism
-Polymorphism adalah sebuah konsep dimana method memiliki kemampuan yang sama tetapi perilakunya berbeda tergantung objeknya.
+class Anjing extends Hewan {
+    public function suara() {
+        echo "Guk Guk";
+    }
+}
 
-Contoh:
-```
-$hewan1 = new Hewan();
-$kucing1 = new Kucing();
+$hewan = new Hewan();
+$kucing = new Kucing();
+$anjing = new Anjing();
 
-$hewan1->suara();  // Hewan bersuara
-$kucing1->suara(); // Meong
+$hewan->suara();
+echo "<br>";
+
+$kucing->suara();
+echo "";
+
+$anjing->suara();
 ```
 
 ### 4. Abstraction
@@ -90,9 +152,13 @@ Terdapat beberapa catatan pada abstract class:
 - Digunakan sebagai class dasar untuk diturunkan ke class lain.
 - Bisa punya method yang sudah didefinisikan maupun method abstrak (yang harus diisi oleh class turunannya).
 
-Contoh:
+Contoh Penerapan: 
+Setiap hewan memiliki kemampuan untuk bersuara, tetapi suara yang dihasilkan setiap hewan berbeda. Oleh karena itu, dibuat class Hewan sebagai kerangka umum yang mewajibkan setiap class turunan untuk mendefinisikan cara bersuaranya masing-masing.
+
+Contoh Code:
 ```
 abstract class Hewan {
+
     abstract public function bersuara();
 
     public function tidur() {
@@ -101,15 +167,17 @@ abstract class Hewan {
 }
 
 class Kucing extends Hewan {
+
     public function bersuara() {
         echo "Meong";
     }
 }
 
-
-// $hewan = new Hewan(); // Ini akan error
 $kucing = new Kucing();
-$kucing->bersuara(); // Output: Meong
+
+$kucing->bersuara();
+echo "";
+$kucing->tidur();
 ```
 
 ## Implementasi OOP pada CRUD
