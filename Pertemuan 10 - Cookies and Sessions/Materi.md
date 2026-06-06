@@ -10,8 +10,8 @@ Untuk set cookie, gunakan fungsi setcookie(). Fungsi ini harus dipanggil sebelum
 
 ```php
 <?php
-// Set cookie dengan nama 'user' dan value 'addin' selama 1 jam
-setcookie("user", "addin", time() + 3600, "/"); // 3600 detik = 1 jam
+// Set cookie dengan nama 'user' dan value 'audin' selama 1 jam
+setcookie("user", "audin", time() + 3600, "/"); // 3600 detik = 1 jam
 ?>
 ```
 
@@ -28,7 +28,7 @@ Berikut contoh cara membuat cookie menggunakan `setcookie()` sekaligus retrieve 
 ```
  <?php
 $cookie_name = "user";
-$cookie_value = "addin";
+$cookie_value = "audin";
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 hari
 ?>
 <html>
