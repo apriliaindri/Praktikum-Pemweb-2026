@@ -1,14 +1,14 @@
 # Pertemuan 11: Laravel 1 (MVC) Routes
 
 ## Pengenalan Laravel
-- Laravel adalah framework di PHP untuk membuat Web atau API
-- Laravel pertama kali dibuat oleh Taylor Otwell tahun 2011
-- Laravel adalah framework yang open source dan gratis, sehingga kita bisa menggunakannya tanpa biaya dan juga bisa berkontribusi ke projectnya 
-
+- Laravel adalah framework PHP yang digunakan untuk membangun aplikasi web maupun API.
+- Laravel pertama kali dikembangkan oleh Taylor Otwell dan dirilis pada tahun 2011.
+- Laravel bersifat open source dan dapat digunakan secara gratis. Selain menggunakannya, kita juga dapat berkontribusi dalam pengembangannya melalui komunitas Laravel.
+  
 ## Kenapa Laravel
-- Saat ini Laravel adalah framework paling populer di PHP
-- Banyak perusahaan yang sudah menggunakan Laravel sebagai framework pilihan ketika menggunakan PHP
-- Laravel juga memiliki ekosistem yang sangat besar, terutama dari ekosistem teknologi pendukung, sehingga ketika menggunakan Laravel, kita bisa mengintegrasikan dengan teknologi pendukung nya dengan lebih mudah
+- Saat ini Laravel merupakan salah satu framework PHP yang paling pupuler.
+- Banyak perusahaan menggunakan Laravel sebagai framework utama untuk mengembangkan aplikasi web berbasis PHP.
+- Laravel memiliki ekosistem yang besar dengan berbagai tools dan layanan pendukung, sehingga memudahkan proses pengembangan dan integrasi aplikasi.
 
 ## Instalasi Laravel
 
@@ -16,41 +16,45 @@
 
 **Step 1: Install Laravel Herd for Windows**
 
-Sekarang kita akses situr resmi (https://herd.laravel.com/windows). Pada halaman web Laravel Herd Kita bisa lihat button _Download for Windows_. Untuk memulai proses download Laravel Herd installer, tekan button tersebut. Kita tunggu sampai proses download selesai. Setelah selesai kita bisa lihat ada file Herd-1.11.1-setup.exe (Versi laravel herd installer pada saat panduan ini ditulis).
+Akses situs resmi Laravel Herd di https://herd.laravel.com/windows. Pada halaman tersebut, klik tombol **Download for Windows** untuk mengunduh installer Laravel Herd.
+
+Tunggu hingga proses unduh selesai. Setelah selesai, akan tersedia file installer dengan nama seperti `Herd-1.11.1-setup.exe` (versi dapat berbeda sesuai versi terbaru yang tersedia saat praktikum dilakukan).
 
 **Step 2: Run Laravel Herd Installer**
 
-Setelah laravel herd installer selesai kita download, kita run installler dengan cara run as adminstrator, lalu ikuti langkah-langkahnya sampai proses install selesai.
+Setelah proses unduh selesai, jalankan installer Laravel Herd dengan memilih **Run as Administrator**, kemudian ikuti langkah-langkah instalasi hingga selesai.
 
 ![run](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*dsZxEb_q66QjqdE5GAHC5w.png)
 
-Catatan: Laravel herd perlu permission sebagai admin supaya installer dapat menambahkan HerdHelper service yang bertanggung jawab untuk memperbaharui file _hosts_, map direktori dan link project ke domain _.test_.
+> **Catatan**: Laravel Herd memerlukan hak akses administrator agar dapat menambahkan service **HerdHelper**, yang digunakan untuk mengelola file _hosts_, memetakan direktori project, dan menghubungkan project Laravel ke domain _.test_.
 
 **Step3: Run Laravel Herd**
 
 ![lets](https://cdn.jsdelivr.net/gh/gungunpriatna/tes-repositori@master/how-to/install-tools/laravel-herd/1%20tampilan%20awal%20setelah%20install.png)
 
-Setelah proses instalasi selesai, selanjutnya kita bisa run langsung laravel herd yang sudah kita install. Ketika pertama kali laravel herd kita run, kita akan membuka windows untuk setup awal. Untuk melanjutkan, kita tekan button _Let's get started_ untuk memulai proses setup awal laravel herd.
+Setelah proses instalasi selesai, buka aplikasi **Laravel Herd** yang telah terpasang. Saat pertama kali dijalankan, Laravel Herd akan menampilkan proses setup awal untuk menyiapkan lingkungan pengembangan.
 
-Selanjutnya laravel herd akan mendownload php, node js dan tools lainnya.
+Klik tombol **Let's get started** untuk memulai proses konfigurasi awal Laravel Herd.
+
+Laravel Herd akan mengunduh dan memasang beberapa komponen yang diperlukan, seperti PHP, Node.js, dan tools pendukung lainnya.
 
 ![php](https://cdn.jsdelivr.net/gh/gungunpriatna/tes-repositori@master/how-to/install-tools/laravel-herd/2%20install%20php%208.3.png)
 
-Setelah proses download selesai, selanjutnya akan masuk ke windows untuk aktivasi laraverd herd pro. Kita bisa tekan link _Skip for now_ untuk menyelesaikan proses setup laravel herd.
+Setelah proses instalasi komponen selesai, akan muncul halaman aktivasi **Laravel Herd Pro**. Pilih **Skip for now** untuk melanjutkan tanpa menggunakan fitur berbayar.
 
 ![skip](https://cdn.jsdelivr.net/gh/gungunpriatna/tes-repositori@master/how-to/install-tools/laravel-herd/3.%20aktivasi%20laravel%20herd%20pro.png)
 
-Selanjutnya kita bisa lihat windows setup completed. Kita bisa pilih tekan button Open Dashboard untuk membuka dashboard Laravel herd.
+Setelah setup selesai, akan muncul halaman **Setup Completed**. Klik tombol **Open Dashboard** untuk membuka dashboard Laravel Herd.
 
 [open](https://cdn.jsdelivr.net/gh/gungunpriatna/tes-repositori@master/how-to/install-tools/laravel-herd/4%20tampilan%20setup%20laravel%20herd%20selesai.png)
 
-Kita bisa lihat tampilan dashboard laravel herd. Pada dashboard kita bisa lihat informasi seperti service yang aktif, menu untuk laravel herd pro, dan quick access dengan button ke halaman untuk mengelola project kita.
+Dashboard Laravel Herd menampilkan berbagai informasi dan fitur yang dapat digunakan untuk mengelola lingkungan pengembangan, seperti status service yang sedang berjalan, pengaturan PHP, serta akses cepat untuk mengelola project Laravel.
 
 [dashboard](https://cdn.jsdelivr.net/gh/gungunpriatna/tes-repositori@master/how-to/install-tools/laravel-herd/5%20tampilan%20dashboard%20laravel%20herd.png)
 
-**Step 4: Cek versi php, laravel, composer dan nodejs**
+**Step 4: Memeriksa Instalasi PHP, Laravel, Composer, dan Node.js**
 
-Selanjutnya kita akan coba cek php, laravel, composer dan nodejs yang terinstall dengan run command berikut ini di command prompt windows atau Cmder.
+Setelah proses setup selesai, pastikan PHP, Laravel Installer, Composer, dan Node.js telah terpasang dengan benar. Buka **Command Prompt**, **Windows Terminal**, atau **Cmder**, kemudian jalankan perintah berikut:
 
 ```
 php --version
@@ -59,7 +63,7 @@ composer --version
 node --version
 ```
 
-Ketika command di atas kita run akan tampil output berikut ini.
+Jika proses instalasi berhasil, terminal akan menampilkan informasi versi dari masing-masing komponen seperti berikut:
 
 ```
 C:\Users\[nama user]>php --version
@@ -82,19 +86,27 @@ v23.0.0
 
 ### [Herd For MacOS](https://herd.laravel.com):
 
-**Step 1: Download the Aplicacion Herd for MacOS**
+### Herd for macOS
+
+**Step 1: Download dan Install Laravel Herd**
+
+Buka situs resmi Laravel Herd di https://herd.laravel.com, kemudian klik tombol **Download for macOS**.
 
 ![mac](https://i.postimg.cc/G2Hftx1v/image.png)
 
-Kalau untuk ini langsung aja ke websitenya langsung klik Download fow macos (https://herd.laravel.com)
+Setelah proses unduh selesai, jalankan installer dan ikuti proses instalasi hingga selesai.
 
 **Step 2: Buka aplikasi Herd nya**
 
-Buka aplikasi Herd nya untuk mastiin kalau bener" sudah bisa jalan.
+Setelah proses instalasi selesai, buka aplikasi **Laravel Herd** untuk memastikan aplikasi telah terpasang dan dapat berjalan dengan baik.
+
+Jika Laravel Herd berhasil dijalankan, maka proses instalasi telah selesai dan lingkungan pengembangan Laravel siap digunakan.
 
 **Step 3: Cek Environment di Terminal**
 
-Setelah proses pemasangan selesai, Kamu memiliki lingkungan pengembangan PHP dan Laravel yang berfungsi penuh. Ini berarti kamu dapat memiliki PHP, Laravel, dan komposer dari terminal Anda:
+Setelah proses instalasi selesai, Laravel Herd akan menyiapkan lingkungan pengembangan yang telah dilengkapi dengan PHP, Laravel Installer, Composer, dan Node.js.
+
+Untuk memastikan seluruh komponen telah terpasang dengan benar, buka **Terminal** lalu jalankan perintah berikut:
 
 ```
 herd --version
@@ -104,13 +116,35 @@ composer --version
 node --version
 ```
 
+## Membuat Project Laravel
+
+Setelah Laravel Herd berhasil terpasang dan seluruh komponen dapat digunakan, kita dapat membuat project Laravel baru.
+
+Buka Terminal, Command Prompt, Windows Terminal, atau Cmder, kemudian jalankan perintah berikut:
+
+```bash
+laravel new belajar-laravel
+```
+
+Tunggu hingga proses pembuatan project selesai, kemudian masuk ke direktori project:
+```bash
+cd belajar-laravel
+```
+
+Selanjutnya buka folder project menggunakan Visual Studio Code:
+```bash
+code .
+```
+
+Pada project inilah kita akan mempelajari konsep MVC, Routing, Controller, dan View pada Laravel.
+
 ## Konsep MVC di Laravel
 
-Laravel menggunakan arsitektur **MVC** yang merupakan singkatan dari:
+Laravel menggunakan arsitektur **MVC (Model-View-Controller)** untuk memisahkan logika aplikasi, tampilan, dan pengelolaan data. Dengan pendekatan ini, kode menjadi lebih terstruktur, mudah dikelola, dan mudah dikembangkan.
 
 - **Model**: Berfungsi untuk berinteraksi dengan database. Model bertanggung jawab dalam mengelola data dan logika bisnis aplikasi.
-- **View**: Menampilkan data kepada user. Biasanya berupa file `.blade.php` yang berada di dalam folder `resources/views`.
-- **Controller**: Menjadi penghubung antara Model dan View. Controller menerima request dari user, memprosesnya, dan mengembalikan response (biasanya berupa View).
+- **View**: Bertugas menampilkan data kepada pengguna. Pada Laravel, View biasanya berupa file `.blade.php` yang berada di folder `resources/views`.
+- **Controller**: Berfungsi sebagai penghubung antara Model dan View. Controller menerima request dari pengguna, memproses data yang diperlukan, kemudian mengembalikan response berupa View atau data lainnya.
 
 ### Ilustrasi Singkat:
 
@@ -118,14 +152,28 @@ Laravel menggunakan arsitektur **MVC** yang merupakan singkatan dari:
 
 ## Struktur Folder Utama Laravel (Terkait MVC)
 
-- `app/Models` → Tempat menyimpan file Model
-- `app/Http/Controllers` → Tempat menyimpan file Controller
-- `resources/views` → Tempat menyimpan file View (Blade)
+Laravel memiliki banyak folder dan file bawaan. Namun, pada praktikum ini kita akan lebih sering menggunakan beberapa folder berikut:
+
+```text
+app
+├── Http
+│   └── Controllers
+│
+├── Models
+│
+resources
+└── views
+```
+
+- `app/Models` → Menyimpan file Model yang digunakan untuk berinteraksi dengan database.
+- `app/Http/Controllers` → Menyimpan file Controller yang menangani request dan menghubungkan Model dengan View.
+- `resources/views` → Menyimpan file View (Blade) yang digunakan untuk menampilkan halaman kepada pengguna.
 
 ## Routing di Laravel
 
-Routing adalah bagian penting dari Laravel. File route utama Laravel berada di `routes/web.php`
-Di sinilah kita mendefinisikan URL dan menghubungkannya ke fungsi atau controller.
+Routing adalah mekanisme yang digunakan untuk menghubungkan URL dengan fungsi atau controller yang akan dijalankan.
+
+Pada Laravel, route untuk aplikasi web umumnya didefinisikan pada file `routes/web.php`. Melalui file ini, kita dapat menentukan halaman atau URL apa saja yang dapat diakses oleh pengguna.
 
 ### Contoh Route Sederhana
 
@@ -139,25 +187,32 @@ Route::get('/', function () {
 
 Penjelasan:
 
-- Route::get() artinya menerima HTTP GET.
-- '/' adalah URL path.
-- `function () { return view('welcome'); }` adalah aksi ketika URL diakses. Dalam hal ini mengembalikan view bernama welcome.
+- `Route::get()` digunakan untuk menangani request HTTP dengan method GET.
+- `/` merupakan URL path yang merepresentasikan halaman utama (_homepage_) aplikasi.
+- `function () { ... }` merupakan fungsi yang akan dijalankan ketika URL tersebut diakses.
+- `return view('welcome');` digunakan untuk menampilkan view bernama `welcome`, yang secara default berada pada file `resources/views/welcome.blade.php`.
 
 ## Membuat Controller dan View di Laravel
 
-Pada bagian ini kita akan belajar cara membuat Controller dan View di Laravel, serta menghubungkannya menggunakan route.
+Pada contoh sebelumnya, route langsung mengembalikan sebuah view menggunakan fungsi (_closure_). Namun, pada aplikasi yang lebih kompleks, logika aplikasi biasanya dipisahkan ke dalam **Controller** agar kode lebih terstruktur dan mudah dikelola.
+
+Pada bagian ini, kita akan belajar cara membuat **Controller** dan **View** di Laravel, kemudian menghubungkannya melalui **route**.
 
 ### 1. Membuat Controller
 
-Laravel menyediakan perintah artisan untuk membuat controller.
+Laravel menyediakan perintah Artisan untuk membuat Controller secara otomatis.
+
+Jalankan perintah berikut pada terminal:
 
 ```bash
 php artisan make:controller HomeController
 ```
 
-Setelah dijalankan, Laravel akan otomatis membuat controller di app/Http/Controllers/HomeController.php
+Setelah perintah dijalankan, Laravel akan membuat file controller baru pada lokasi `app/Http/Controllers/HomeController.php`
 
 ### 2. Menulis Method / Function di Controller
+
+Buka file `app/Http/Controllers/HomeController.php`, kemudian ubah isinya menjadi:
 
 ```php
 <?php
@@ -181,13 +236,14 @@ class HomeController extends Controller
 ```
 
 Penjelasan:
-- index() akan menampilkan halaman home.
-- about() akan menampilkan halaman about.
+- `index()` digunakan untuk menampilkan halaman Home.
+- `about()` digunakan untuk menampilkan halaman About.
 
 ### 3. Membuat View
 
 #### a. Membuat View home.blade.php
 
+Buat file berikut:
 ```php
 resources/views/home.blade.php
 ```
@@ -208,6 +264,7 @@ Isi dengan kode berikut:
 
 #### b. Membuat View about.blade.php
 
+Buat file berikut:
 ```php
 resources/views/about.blade.php
 ```
@@ -239,8 +296,8 @@ Route::get('/about', [HomeController::class, 'about']);
 ```
 
 Penjelasan:
-- Ketika user membuka /home, akan ditampilkan view home.blade.php
-- Ketika user membuka /about, akan ditampilkan view about.blade.php
+- Ketika pengguna mengakses `/home`, Laravel akan menjalankan method `index()` pada `HomeController`.
+- Ketika pengguna mengakses `/about`, Laravel akan menjalankan method `about()` pada `HomeController`.
 
 ### 5. Jalankan kode laravel
 
