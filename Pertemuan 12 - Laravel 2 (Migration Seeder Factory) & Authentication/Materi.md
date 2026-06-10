@@ -43,11 +43,11 @@ public function up()
 
 ### Pengertian
 
-#### Seeder
+- **Seeder** 
 
 Seeder digunakan untuk mengisi data awal atau data dummy ke dalam database. Biasanya digunakan saat proses testing dan pengembangan aplikasi.
 
-#### Factory
+- **Factory**
 
 Factory digunakan untuk menghasilkan data dummy secara otomatis menggunakan library Faker.
 
