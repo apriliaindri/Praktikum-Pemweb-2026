@@ -46,11 +46,11 @@ Setelah proses instalasi komponen selesai, akan muncul halaman aktivasi **Larave
 
 Setelah setup selesai, akan muncul halaman **Setup Completed**. Klik tombol **Open Dashboard** untuk membuka dashboard Laravel Herd.
 
-[open](https://cdn.jsdelivr.net/gh/gungunpriatna/tes-repositori@master/how-to/install-tools/laravel-herd/4%20tampilan%20setup%20laravel%20herd%20selesai.png)
+![open](https://cdn.jsdelivr.net/gh/gungunpriatna/tes-repositori@master/how-to/install-tools/laravel-herd/4%20tampilan%20setup%20laravel%20herd%20selesai.png)
 
 Dashboard Laravel Herd menampilkan berbagai informasi dan fitur yang dapat digunakan untuk mengelola lingkungan pengembangan, seperti status service yang sedang berjalan, pengaturan PHP, serta akses cepat untuk mengelola project Laravel.
 
-[dashboard](https://cdn.jsdelivr.net/gh/gungunpriatna/tes-repositori@master/how-to/install-tools/laravel-herd/5%20tampilan%20dashboard%20laravel%20herd.png)
+![dashboard](https://cdn.jsdelivr.net/gh/gungunpriatna/tes-repositori@master/how-to/install-tools/laravel-herd/5%20tampilan%20dashboard%20laravel%20herd.png)
 
 **Step 4: Memeriksa Instalasi PHP, Laravel, Composer, dan Node.js**
 
