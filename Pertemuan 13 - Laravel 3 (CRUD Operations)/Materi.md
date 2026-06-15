@@ -1,4 +1,4 @@
-# Pertemuan 12: Laravel 3 (CRUD Operations)
+# Laravel 3 (CRUD Operations)
 
 ## 1. Pengenalan CRUD
 
