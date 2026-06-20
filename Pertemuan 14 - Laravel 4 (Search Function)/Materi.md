@@ -5,17 +5,17 @@ Pencarian (search) merupakan fitur penting dalam aplikasi web yang memungkinkan 
 
 ### Konsep Pencarian dalam Laravel
 
-Basic Search: Pencarian sederhana yang menggunakan query `WHERE` untuk memfilter data berdasarkan kata kunci tertentu.
-
-Pagination with Search: Kombinasi antara fitur pencarian dan paginasi untuk menampilkan hasil secara bertahap, sehingga meningkatkan kenyamanan dan pengalaman pengguna saat mengakses data dalam jumlah besar.
+- Basic Search: Pencarian sederhana yang menggunakan query `WHERE` untuk memfilter data berdasarkan kata kunci tertentu.
+  
+- Pagination with Search: Kombinasi antara fitur pencarian dan paginasi untuk menampilkan hasil secara bertahap, sehingga meningkatkan kenyamanan dan pengalaman pengguna saat mengakses data dalam jumlah besar.
 
 ### Metode Implementasi Pencarian
 
-Query Builder: Menggunakan metode `where()` dan `orWhere()` untuk melakukan pencarian data secara langsung melalui query database.
+- Query Builder: Menggunakan metode `where()` dan `orWhere()` untuk melakukan pencarian data secara langsung melalui query database.
 
-Eloquent: Memanfaatkan fitur Eloquent ORM untuk melakukan pencarian dengan sintaks yang lebih mudah dan fleksibel.
+- Eloquent: Memanfaatkan fitur Eloquent ORM untuk melakukan pencarian dengan sintaks yang lebih mudah dan fleksibel.
 
-Laravel Scout: Digunakan untuk implementasi pencarian full-text yang lebih canggih dan mendukung pencarian yang lebih cepat serta skalabel.
+- Laravel Scout: Digunakan untuk implementasi pencarian full-text yang lebih canggih dan mendukung pencarian yang lebih cepat serta skalabel.
 
 ## Third-party Packages: Menggunakan package seperti Algolia atau Elasticsearch
 
